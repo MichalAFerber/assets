@@ -90,8 +90,8 @@
   }
 
   function copyText(text, label) {
-    function done() { showToast(label + ' copied! 🎉'); }
-    function fail() { showToast('Copy failed 😿 — long-press the link instead'); }
+    function done() { showToast(label + ' copied ✓'); }
+    function fail() { showToast('Copy failed — long-press the link instead'); }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(done, fail);
     } else {
@@ -129,9 +129,9 @@
   function renderBreadcrumbs(folder) {
     var html = '';
     if (!folder) {
-      html = '<span class="crumb current">🏠 home</span>';
+      html = '<span class="crumb current">Home</span>';
     } else {
-      html = '<a class="crumb" href="' + esc(folderHref('')) + '">🏠 home</a>';
+      html = '<a class="crumb" href="' + esc(folderHref('')) + '">Home</a>';
       var segs = folder.split('/');
       var acc = [];
       segs.forEach(function (seg, i) {
@@ -177,9 +177,9 @@
             folderLink +
           '</div>' +
           '<div class="asset-actions">' +
-            '<button class="btn btn-copy" type="button" data-copy="' + esc(pages) + '" data-label="Link">📋 Link</button>' +
-            '<button class="btn btn-raw" type="button" data-copy="' + esc(rawUrl(file)) + '" data-label="Raw link">🐙 Raw</button>' +
-            '<a class="btn btn-dl" href="' + esc(SITE.baseurl + encodePath(file.path)) + '" download>⬇️</a>' +
+            '<button class="btn btn-copy" type="button" data-copy="' + esc(pages) + '" data-label="Link">Copy link</button>' +
+            '<button class="btn btn-raw" type="button" data-copy="' + esc(rawUrl(file)) + '" data-label="Raw link">Raw</button>' +
+            '<a class="btn btn-dl" href="' + esc(SITE.baseurl + encodePath(file.path)) + '" download aria-label="Download ' + esc(file.name) + '">↓</a>' +
           '</div>' +
         '</div>' +
       '</article>';
@@ -226,7 +226,7 @@
     }
 
     if (subNames.length) {
-      html += '<h2 class="section-title">📂 Folders <span class="count">' + subNames.length + '</span></h2>';
+      html += '<h2 class="section-title">Folders <span class="count">' + subNames.length + '</span></h2>';
       html += '<div class="grid-folders">';
       subNames.forEach(function (name) {
         var full = folder ? folder + '/' + name : name;
@@ -240,7 +240,7 @@
     }
 
     if (c.files.length) {
-      html += '<h2 class="section-title">✨ Assets <span class="count">' + c.files.length + '</span></h2>';
+      html += '<h2 class="section-title">Assets <span class="count">' + c.files.length + '</span></h2>';
       html += '<div class="grid-assets">';
       c.files.forEach(function (f) { html += assetCardHtml(f, false); });
       html += '</div>';
@@ -265,12 +265,12 @@
       return;
     }
 
-    var html = '<h2 class="section-title">🔍 Results for “' + esc(query) + '” <span class="count">' + hits.length + '</span></h2>';
+    var html = '<h2 class="section-title">Results for “' + esc(query) + '” <span class="count">' + hits.length + '</span></h2>';
     html += '<div class="grid-assets">';
     hits.slice(0, 120).forEach(function (f) { html += assetCardHtml(f, true); });
     html += '</div>';
     if (hits.length > 120) {
-      html += '<p class="loading">…and ' + (hits.length - 120) + ' more. Keep typing to narrow it down! 🎯</p>';
+      html += '<p class="loading">…and ' + (hits.length - 120) + ' more. Keep typing to narrow it down.</p>';
     }
     $app.innerHTML = html;
   }
