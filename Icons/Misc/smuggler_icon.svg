@@ -1,0 +1,95 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="dropshadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="6" dy="10" stdDeviation="7" flood-color="#000000" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dropshadow)">
+
+    <path id="torso" d="
+      M 180,222
+      L 332,222
+      C 352,222 372,235 375,260
+      C 380,290 378,320 370,345
+      C 380,365 378,385 368,400
+      C 372,412 366,424 350,430
+      C 330,440 290,440 256,405
+      C 222,440 182,440 162,430
+      C 146,424 140,412 144,400
+      C 134,385 132,365 142,345
+      C 134,320 132,290 137,260
+      C 140,235 160,222 180,222
+      Z"/>
+
+    <path id="wingL" d="
+      M 180,150
+      L 45,105
+      C 30,100 25,112 35,125
+      L 178,222
+      Z"/>
+
+    <path id="wingR" d="
+      M 332,150
+      L 467,105
+      C 482,100 487,112 477,125
+      L 334,222
+      Z"/>
+
+    <path id="head" d="
+      M 168,150
+      C 168,95 205,62 256,62
+      C 307,62 344,95 344,150
+      C 344,192 328,216 302,229
+      C 288,236 270,240 256,240
+      C 242,240 224,236 210,229
+      C 184,216 168,192 168,150
+      Z"/>
+
+    <use href="#torso" fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="round"/>
+    <use href="#wingL" fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="round"/>
+    <use href="#wingR" fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="round"/>
+    <use href="#head" fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="round"/>
+
+    <use href="#torso" fill="#C9974B"/>
+    <use href="#wingL" fill="#C9974B"/>
+    <use href="#wingR" fill="#C9974B"/>
+    <use href="#head" fill="#C9974B"/>
+
+  </g>
+
+  <!-- open collar / vest V -->
+  <path d="M 226,222 L 286,222 L 268,282 L 244,282 Z" fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M 226,222 L 286,222 L 268,282 L 244,282 Z" fill="#EFE6D8"/>
+
+  <!-- holster strap across chest -->
+  <path d="M 190,232 L 335,335 L 320,355 L 175,252 Z" fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M 190,232 L 335,335 L 320,355 L 175,252 Z" fill="#8a6633"/>
+
+  <!-- blaster holster at hip -->
+  <path d="M 358,352
+           L 384,352
+           C 392,352 398,358 398,366
+           L 398,376
+           L 412,378
+           L 412,392
+           L 398,392
+           L 398,404
+           C 398,410 392,414 386,414
+           L 362,414
+           Z"
+        fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M 358,352
+           L 384,352
+           C 392,352 398,358 398,366
+           L 398,376
+           L 412,378
+           L 412,392
+           L 398,392
+           L 398,404
+           C 398,410 392,414 386,414
+           L 362,414
+           Z"
+        fill="#3a3a3a"/>
+
+</svg>
