@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /manifest.json
+---
+{
+  "generated": {{ site.time | date_to_xmlschema | jsonify }},
+  "files": [
+    {%- for f in site.static_files -%}
+      {%- assign prefix = f.path | slice: 0, 6 -%}
+      {%- assign lowname = f.name | downcase -%}
+      {%- if prefix == "/site/" -%}{%- continue -%}{%- endif -%}
+      {%- if lowname == "readme.md" or lowname == "readme.txt" or lowname == "readme" -%}{%- continue -%}{%- endif -%}
+    {"path":{{ f.path | jsonify }},"name":{{ f.name | jsonify }},"ext":{{ f.extname | downcase | jsonify }},"mod":{{ f.modified_time | date: "%Y-%m-%d" | jsonify }}},
+    {%- endfor -%}
+    null
+  ]
+}
