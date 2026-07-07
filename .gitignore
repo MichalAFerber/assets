@@ -5,3 +5,9 @@ _site/
 Gemfile.lock
 vendor/
 node_modules/
+
+# Staging area for unsorted assets — drop files here, then ask Claude to
+# organize + dedupe them into the vault. Contents are ignored; the folder's
+# README is tracked so the folder persists. See CLAUDE.md.
+/_Inbox/*
+!/_Inbox/README.md
