@@ -1,0 +1,18 @@
+# Site settings
+title: "TechGuyWithABeard's Asset Vault"
+description: "A home for homeless assets — icons, wallpapers, and everything in between. Grab a link and go! 🚀"
+url: "https://michalaferber.github.io"
+baseurl: "/assets"
+
+# Repo info used by the gallery JS to build raw.githubusercontent.com links
+repo: "MichalAFerber/assets"
+branch: "main"
+
+# Jekyll build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
