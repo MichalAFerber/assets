@@ -8,6 +8,11 @@ baseurl: "/assets"
 repo: "MichalAFerber/assets"
 branch: "main"
 
+# Plausible Analytics (self-hosted). Leave plausible.domain blank to disable.
+plausible:
+  domain: "michalaferber.github.io"           # data-domain (must match the site in Plausible)
+  src: "https://plausible.thomsonblack.us/js/script.js"
+
 # Jekyll build settings
 markdown: kramdown
 exclude:
