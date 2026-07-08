@@ -68,13 +68,24 @@ Transformers, Mario), `Planes`, `Scenery` (landscapes), `Tech`, `Trucks`,
 Notes: **Cars** = real vehicles; the Pixar *Cars* movie goes to **Movies**.
 Portrait/phone-resolution versions go to **Mobile** regardless of subject.
 
-### `Icons/` — organized **by subject**
+### `Icons/` — small square graphics: UI icons, app icons, icon sets
 
-Themed icon sets are named `<subject>_icon_rgb_<color>.png` across seven color
-themes: `atlantic, azalea, grass, honeycomb, horseshoe, reverse, rose`. Group
-all color variants of one subject into `Icons/<subject>/` (e.g.
-`Icons/airplane/`). Miscellaneous one-off icons that don't fit the pattern go
-in `Icons/Misc/`.
+**Icon vs. logo test:** an *icon* is a small, square-ish graphic
+(roughly ≤1024 px, aspect ~1:1) used as a UI glyph, app/product icon, or
+folder icon → it belongs in `Icons/`. A *brand/identity mark* (a company's
+official wordmark or logo) stays in `Images/Logos`, `Images/Brands`, or
+`Images/Social_Media` even when it's small and square. When a small square
+graphic sits in `Images/General` or `Images/Applications`, move it to `Icons/`
+unless it's character art, a photo, a meme, or an ambiguous illustration
+(those stay in `Images/General`).
+
+Layout inside `Icons/`:
+- Themed icon sets named `<subject>_icon_rgb_<color>.png` (seven color themes:
+  `atlantic, azalea, grass, honeycomb, horseshoe, reverse, rose`) → group all
+  color variants of one subject into `Icons/<subject>/` (e.g. `Icons/airplane/`).
+- `Icons/Applications/` — app/service/product icons.
+- `Icons/Papirus/` — the Papirus Linux folder-icon set.
+- `Icons/Misc/` — generic one-off UI/device icons that don't form a set.
 
 ### `Images/` — logos, brands, and graphics, by category
 
@@ -83,11 +94,15 @@ in `Icons/Misc/`.
 exactly as shipped), `Credit_Debit_Cards`, `Games`, `General` (catch-all),
 `Logos`, `Memes`, `QSI`, `Social_Media`, `Virtual_Backgrounds`.
 
+`General` and `Applications` hold non-icon graphics only — character art,
+photos, memes, wordmark banners, and brand logos too wide to be icons. Their
+small square UI/app icons live in `Icons/` (see the icon vs. logo test above).
+
 When collapsing duplicates: if a logo in `Applications/`, `Logos/`, `Brands/`,
 `General/`, or `Games/` is byte-identical to one inside a Company Branding
 Kit, keep the brand-kit copy and remove the loose one.
 
-### `University of South Carolina/` — official USC logo kit
+### `USC/` — official University of South Carolina logo kit
 
 Leave its shipped format/color folder structure intact, like a brand kit.
 
