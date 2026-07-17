@@ -37,8 +37,6 @@ Notes:
   feel free to document folders.
 - The `site/` folder holds the website's own CSS/JS/fonts — don't put
   assets there.
-- Fonts: [Fira Code](https://github.com/tonsky/FiraCode) is vendored under
-  `site/fonts/` (SIL OFL license — see `site/fonts/LICENSE`).
 
 ## Local preview
 
@@ -47,3 +45,36 @@ bundle install
 bundle exec jekyll serve
 # → http://localhost:4000/assets/
 ```
+
+## Privacy
+
+Static site, no accounts, no forms, no server-side processing. Analytics are
+handled by a self-hosted [Plausible](https://plausible.io/) instance
+(cookieless, no personal data, no cross-site tracking) — no Google Analytics,
+no ad pixels. The assets themselves are public files served by GitHub Pages.
+
+## Standards & deviations
+
+Built to the **TGWAB Dev Standards** as a **Class C micro-project** (asset
+collection on GitHub Pages + Jekyll — public, MIT, no custom domain). The full
+SEO/security-headers plumbing kit does not apply to Class C. Deliberate
+deviations from the baseline:
+
+- **Design is calm/casual, not "bold & bright."** Requested for this project —
+  it's a low-key utility vault, not a marketing surface.
+
+## Credits
+
+| Component | Version | License |
+| --- | --- | --- |
+| [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) (headings, via `@fontsource`) | 5.2.7 | SIL OFL 1.1 (`site/fonts/LICENSE`) |
+| [Octicons](https://github.com/primer/octicons) `mark-github` glyph | — | MIT (© GitHub, Inc.) |
+
+Brand mark (`site/img/favicon.svg`) is original. Body copy uses the system
+font stack. All web fonts are self-hosted `woff2` — no Google Fonts, no CDNs.
+
+## License
+
+[MIT](LICENSE) for the site code and original brand mark, with third-party
+notices in `LICENSE`. Individual assets in the content folders may carry their
+own rights — check each folder.

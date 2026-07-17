@@ -21,3 +21,4 @@ exclude:
   - vendor
   - node_modules
   - README.md
+  - LICENSE
