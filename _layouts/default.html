@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+  <link rel="icon" href="{{ '/site/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/site/css/main.css' | relative_url }}">
   {%- if site.plausible.domain and site.plausible.domain != "" %}
   <script defer data-domain="{{ site.plausible.domain }}" src="{{ site.plausible.src }}"></script>
@@ -28,17 +29,31 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="site-logo" href="{{ '/' | relative_url }}">🎨 <span>{{ site.title }}</span></a>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark / light mode">🌗</button>
+    <a class="site-logo" href="{{ '/' | relative_url }}">
+      <img class="site-mark" src="{{ '/site/img/favicon.svg' | relative_url }}" width="28" height="28" alt="">
+      <span>{{ site.title }}</span>
+    </a>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/{{ site.repo }}" target="_blank" rel="noopener" aria-label="View this project on GitHub">
+        {%- include octocat.svg -%}
+      </a>
+      <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-label="Toggle dark / light mode" aria-pressed="false">🌗</button>
+    </div>
   </header>
 
-  <main class="site-main">
+  <main class="site-main" id="main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
-    <p>© {{ site.time | date: "%Y" }} | Created with ❤️ by <a href="https://michalferber.dev">Michal Ferber, aka TechGuyWithABeard</a></p>
+    <a class="footer-gh" href="https://github.com/{{ site.repo }}" target="_blank" rel="noopener" aria-label="View this project on GitHub">
+      {%- include octocat.svg -%}
+      <span>Source on GitHub</span>
+    </a>
+    <p>© {{ site.time | date: "%Y" }} | Created with ❤️ by <a href="https://michalferber.dev/" target="_blank" rel="noopener">Michal Ferber</a>, aka <a href="https://techguywithabeard.com/" target="_blank" rel="noopener">TechGuyWithABeard</a>.</p>
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

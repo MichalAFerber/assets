@@ -277,11 +277,18 @@
 
   /* -------------------------------------------------------------- boot */
 
-  document.getElementById('theme-toggle').addEventListener('click', function () {
+  var $themeToggle = document.getElementById('theme-toggle');
+  function syncThemePressed() {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    $themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+  }
+  syncThemePressed();
+  $themeToggle.addEventListener('click', function () {
     var cur = document.documentElement.getAttribute('data-theme');
     var next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
+    syncThemePressed();
   });
 
   // Event delegation for all copy buttons
