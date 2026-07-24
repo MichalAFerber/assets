@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <link rel="icon" href="{{ '/site/img/favicon.svg' | relative_url }}" type="image/svg+xml">
@@ -20,29 +20,10 @@
       branch: {{ site.branch | jsonify }},
       title: {{ site.title | jsonify }}
     };
-    // Apply saved theme before first paint to avoid a flash
-    (function () {
-      var t = localStorage.getItem('theme');
-      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <a class="site-logo" href="{{ '/' | relative_url }}">
-      <img class="site-mark" src="{{ '/site/img/favicon.svg' | relative_url }}" width="28" height="28" alt="">
-      <span>{{ site.title }}</span>
-    </a>
-    <div class="header-actions">
-      <a class="icon-btn" href="https://github.com/{{ site.repo }}" target="_blank" rel="noopener" aria-label="View this project on GitHub">
-        {%- include octocat.svg -%}
-      </a>
-      <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-label="Toggle dark / light mode" aria-pressed="false">🌗</button>
-    </div>
-  </header>
 
   <main class="site-main" id="main">
     {{ content }}
@@ -51,6 +32,7 @@
   <footer class="site-footer">
     <a class="footer-gh" href="https://github.com/{{ site.repo }}" target="_blank" rel="noopener" aria-label="View this project on GitHub">
       {%- include octocat.svg -%}
+      Source on GitHub
     </a>
     <p>© {{ site.time | date: "%Y" }} | Created with ❤️ by <a href="https://michalferber.dev/" target="_blank" rel="noopener">Michal Ferber</a>, aka <a href="https://techguywithabeard.com/" target="_blank" rel="noopener">TechGuyWithABeard</a>.</p>
   </footer>

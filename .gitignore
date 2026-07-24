@@ -6,6 +6,9 @@ Gemfile.lock
 vendor/
 node_modules/
 
+# CI-generated WebP thumbnails (built fresh on every Pages deploy).
+site/thumbs/
+
 # The global gitignore's macOS "Icon?" rule (for Icon\r resource files) also
 # matches this repo's Icons/ asset directory. Re-include it here.
 !Icons/
