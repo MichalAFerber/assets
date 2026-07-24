@@ -22,3 +22,4 @@ exclude:
   - node_modules
   - README.md
   - LICENSE
+  - scripts   # build tooling (gen-thumbs.sh) — not an asset, keep it out of the gallery
