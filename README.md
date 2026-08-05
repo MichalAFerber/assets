@@ -62,6 +62,13 @@ deviations from the baseline:
 
 - **Design is calm/casual, not "bold & bright."** Requested for this project —
   it's a low-key utility vault, not a marketing surface.
+- **§4: one Actions workflow builds this site, not the platform's own build.**
+  The gallery's thumbnails are generated at build time — `scripts/gen-thumbs.sh`
+  turns 1,892 source images into WebP with `cwebp`, and none of the output is
+  committed. GitHub Pages' own build cannot run that, so the site would publish
+  with 1,892 broken thumbnails. There is exactly one workflow (`pages.yml`) and
+  no second deploy path, which is what §4 actually binds; the platform-build
+  preference is what is deviated from.
 
 ## Credits
 
