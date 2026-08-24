@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7c4dbe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- CaptureWizard placeholder mark = the wizard-family clipboard glyph
+       (same mark as the Nav/Footer brand icon — dev-standards §1: favicon
+       doubles as the header brand icon). <<from plan: brand assets>> -->
+  <rect x="3.5" y="3" width="11" height="14" rx="2"/>
+  <path d="M9 21h9a2 2 0 0 0 2-2v-9"/>
+</svg>

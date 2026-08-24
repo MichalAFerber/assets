@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- michalferber.me — text-lines mark (the blog) on the blog accent tile -->
+    <rect x="8" y="8" width="112" height="112" rx="26" fill="#5fb2ff" />
+    <rect x="36" y="38" width="56" height="12" rx="6" fill="#0d1118" />
+    <rect x="36" y="58" width="56" height="12" rx="6" fill="#0d1118" />
+    <rect x="36" y="78" width="34" height="12" rx="6" fill="#0d1118" />
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a5cd0"/>
+      <stop offset="100%" stop-color="#6f42b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: suite-standard rounded square, CopyWizard wizard-purple -->
+  <rect width="128" height="128" rx="20" fill="url(#bg)"/>
+
+  <!-- Back form (source) -->
+  <rect x="26" y="22" width="56" height="68" rx="8" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.55"/>
+
+  <!-- Front form (destination copy) — solid fill occludes the back form -->
+  <rect x="46" y="40" width="56" height="68" rx="8" fill="#7b4cc4" stroke="#ffffff" stroke-width="6"/>
+
+  <!-- Field lines on the front form -->
+  <line x1="58" y1="60" x2="90" y2="60" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  <line x1="58" y1="76" x2="90" y2="76" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.65"/>
+  <line x1="58" y1="92" x2="76" y2="92" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Wizard sparkle -->
+  <path d="M98 19 L101.2 26.8 L109 30 L101.2 33.2 L98 41 L94.8 33.2 L87 30 L94.8 26.8 Z" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- TechGuyWithABeard — beard mark on the services accent tile -->
+    <rect x="8" y="8" width="112" height="112" rx="26" fill="#e36b2a" />
+    <rect x="42" y="40" width="44" height="12" rx="6" fill="#0d0e12" />
+    <path d="M40 58 h48 v14 a24 24 0 0 1 -48 0 z" fill="#0d0e12" />
+</svg>
