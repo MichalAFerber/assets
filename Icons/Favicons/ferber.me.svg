@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- ferber.me — family-tree mark on the archive accent tile -->
+    <rect x="8" y="8" width="112" height="112" rx="26" fill="#c9a14a" />
+    <circle cx="50" cy="54" r="15" fill="#101510" />
+    <circle cx="78" cy="54" r="15" fill="#101510" />
+    <circle cx="64" cy="42" r="15" fill="#101510" />
+    <rect x="58" y="66" width="12" height="26" rx="6" fill="#101510" />
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- michalferber.dev — terminal-prompt mark on the products accent tile -->
+    <rect x="8" y="8" width="112" height="112" rx="26" fill="#36d8a4" />
+    <path d="M40 42 L64 64 L40 86" fill="none" stroke="#0b1017" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="70" y="77" width="24" height="13" rx="6.5" fill="#0b1017" />
+</svg>

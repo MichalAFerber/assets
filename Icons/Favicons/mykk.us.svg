@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Rounded square background with gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#e040fb"/>
+    </linearGradient>
+    <linearGradient id="widget" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.95)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.85)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <!-- Dashboard grid - widget cards with rounded corners -->
+  <!-- Top-left: large square widget (search/weather) -->
+  <rect x="16" y="16" width="44" height="44" rx="8" fill="white" opacity="0.92"/>
+
+  <!-- Top-right: tall widget -->
+  <rect x="68" y="16" width="44" height="20" rx="8" fill="white" opacity="0.92"/>
+
+  <!-- Mid-right: small widget -->
+  <rect x="68" y="44" width="44" height="16" rx="6" fill="white" opacity="0.75"/>
+
+  <!-- Bottom-left: wide widget -->
+  <rect x="16" y="68" width="44" height="16" rx="6" fill="white" opacity="0.75"/>
+
+  <!-- Bottom-right: medium widget -->
+  <rect x="68" y="68" width="44" height="16" rx="6" fill="white" opacity="0.75"/>
+
+  <!-- Bottom full-width widget -->
+  <rect x="16" y="92" width="96" height="20" rx="8" fill="white" opacity="0.92"/>
+
+  <!-- Subtle detail lines inside top-left widget to suggest content -->
+  <rect x="22" y="22" width="20" height="3" rx="1.5" fill="#6c63ff" opacity="0.5"/>
+  <rect x="22" y="29" width="32" height="2" rx="1" fill="#6c63ff" opacity="0.25"/>
+  <rect x="22" y="34" width="28" height="2" rx="1" fill="#6c63ff" opacity="0.25"/>
+
+  <!-- Dot detail in top-right widget -->
+  <circle cx="76" cy="26" r="3" fill="#e040fb" opacity="0.6"/>
+  <rect x="83" y="24" width="20" height="3" rx="1.5" fill="#6c63ff" opacity="0.35"/>
+
+  <!-- Bar chart suggestion in bottom full-width widget -->
+  <rect x="24" y="101" width="6" height="5" rx="1" fill="#6c63ff" opacity="0.35"/>
+  <rect x="33" y="99" width="6" height="7" rx="1" fill="#6c63ff" opacity="0.45"/>
+  <rect x="42" y="97" width="6" height="9" rx="1" fill="#e040fb" opacity="0.5"/>
+  <rect x="51" y="100" width="6" height="6" rx="1" fill="#6c63ff" opacity="0.35"/>
+  <rect x="60" y="98" width="6" height="8" rx="1" fill="#6c63ff" opacity="0.4"/>
+</svg>
