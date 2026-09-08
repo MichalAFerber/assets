@@ -35,6 +35,9 @@ updates:
     commit-message:
       prefix: "chore(deps)"
     groups:
-      bundler:
+      bundler-non-major:
         patterns: ["*"]
         update-types: [minor, patch]
+      bundler-major:
+        patterns: ["*"]
+        update-types: [major]
