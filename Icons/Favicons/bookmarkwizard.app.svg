@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- BookmarkWizard brand mark: bookmark ribbon + wizard spark (purple).
+       Master lives with the extension (bookmarkwizard-extension →
+       scripts/generate_icons.py); §1: the favicon doubles as
+       the Nav/Footer brand icon. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b6ef5"/>
+      <stop offset="1" stop-color="#5a38d5"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ded6ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <!-- bookmark ribbon: rounded shoulders, notched tail -->
+  <path d="M46 98 V37 a7 7 0 0 1 7 -7 H75 a7 7 0 0 1 7 7 V98 L64 84.5 Z" fill="#ffffff"/>
+  <!-- wizard spark: four-point star with a small companion -->
+  <path d="M97 22 L100.4 32.6 L111 36 L100.4 39.4 L97 50 L93.6 39.4 L83 36 L93.6 32.6 Z" fill="url(#spark)"/>
+  <path d="M33 92 L35.2 98.8 L42 101 L35.2 103.2 L33 110 L30.8 103.2 L24 101 L30.8 98.8 Z" fill="#ded6ff" opacity="0.85"/>
+</svg>
